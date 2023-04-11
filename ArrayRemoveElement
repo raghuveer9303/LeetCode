@@ -1,0 +1,24 @@
+public int RemoveElement(int[] nums, int val) {
+         int k = 0;
+    int l = nums.Length;
+    for (int i = 0; i < l; i++)
+    {
+        if (nums[i] == val)
+        {
+            
+            for (int j = i; j < l -1; j++) {
+                nums[j] = nums[j + 1];
+            }
+            i--;
+            l--;
+
+        }
+        else
+        {
+            k++;
+        }
+
+    }
+
+    return k;
+    }
